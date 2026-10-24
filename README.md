@@ -41,7 +41,6 @@ apresentacao-pessoal/
 ├── style.css
 ├── README.md
 └── imagens/
-    ├── LEIA-ME.txt
     └── foto-perfil.jpg
 ```
 
