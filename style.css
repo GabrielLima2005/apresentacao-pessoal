@@ -1,0 +1,218 @@
+/* Configurações gerais da página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #111411;
+    color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    padding: 25px 8%;
+    border-bottom: 1px solid #293129;
+    text-align: center;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #65c947;
+}
+
+.subtitulo {
+    color: #a5b0a1;
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+/* Apresentação pessoal */
+.apresentacao {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 65px 25px 80px;
+    text-align: center;
+}
+
+.foto-container {
+    margin-bottom: 25px;
+}
+
+/* A foto aparece gradualmente ao carregar a página. */
+.foto-perfil {
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    border: 4px solid #65c947;
+    object-fit: cover;
+    animation: aparecer 1.5s ease-in-out;
+}
+
+/* @keyframes define o início e o fim da animação da foto. */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.destaque {
+    color: #65c947;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.apresentacao h1 {
+    margin: 12px 0 20px;
+    font-size: 38px;
+}
+
+.apresentacao h1 span {
+    color: #65c947;
+}
+
+.descricao {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #b8c0b5;
+    font-size: 16px;
+}
+
+/* O botão muda de cor suavemente ao passar o mouse. */
+.botao {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid #65c947;
+    border-radius: 6px;
+    background-color: #65c947;
+    color: #111411;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.botao:hover {
+    background-color: transparent;
+    color: #65c947;
+    transform: scale(1.05);
+}
+
+/* Título da seção de cards */
+.secao-interesses {
+    padding: 60px 8%;
+    background-color: #171b17;
+}
+
+.titulo-secao {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.titulo-secao h2 {
+    margin: 10px 0;
+    font-size: 30px;
+}
+
+.titulo-secao > p:last-child {
+    color: #aab2a7;
+}
+
+/* CSS Grid organiza os cards em colunas e linhas, sem Flexbox.
+   auto-fit e minmax adaptam a grade ao espaço disponível. */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+/* A transição deixa suaves as mudanças do card no hover. */
+.card {
+    overflow: hidden;
+    border: 1px solid #303830;
+    border-radius: 10px;
+    background-color: #202620;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* translateY move o card para cima e scale aumenta um pouco seu tamanho. */
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    border-color: #65c947;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Imagens dos cards */
+.card img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.card-conteudo {
+    padding: 20px;
+}
+
+.card-conteudo h3 {
+    margin-bottom: 10px;
+    color: #65c947;
+    font-size: 20px;
+}
+
+.card-conteudo p {
+    color: #c0c7bd;
+    font-size: 14px;
+}
+
+/* Rodapé */
+.rodape {
+    padding: 25px;
+    border-top: 1px solid #293129;
+    color: #a5b0a1;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* Responsividade para telas menores.
+   A grade reorganiza os cards e os textos ficam menores. */
+@media (max-width: 600px) {
+    .apresentacao {
+        padding: 45px 20px 60px;
+    }
+
+    .apresentacao h1 {
+        font-size: 29px;
+    }
+
+    .secao-interesses {
+        padding: 45px 20px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 25px;
+    }
+
+    .grid-cards {
+        grid-template-columns: 1fr;
+    }
+}
