@@ -88,7 +88,7 @@ O projeto pode ser publicado gratuitamente na Vercel, utilizando o repositório 
 https://github.com/GabrielLima2005/apresentacao-pessoal
 
 **Demonstração online:**  
-Adicione aqui a URL gerada pela Vercel após a publicação.
+https://apresentacao-pessoal-gray.vercel.app/
 
 ## 📚 Objetivos de Aprendizagem
 
